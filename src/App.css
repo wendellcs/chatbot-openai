@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  background-color: #0F172A;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  height: 100vh;
+}
+
+header {
+  background-color: #1E293B;
+  display: flex;
+  padding: 20px 120px;
+  align-items: center;
+  gap: 20px;
+}
+
+.box p {
+  color: #a9acaf;
+}
+
+.icon, button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #9167f5;
+  background: linear-gradient(144deg,rgba(145, 103, 245, 1) 0%, rgba(41, 0, 112, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #1E293B;
+  padding: 40px 120px;
+
+}
+
+form {
+  display: flex;
+  gap: 20px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 16px;
+  border: 0;
+  padding-left: 10px;
+  background-color:  #0F172A;
+  outline: none;
+}
+
+button {
+  border-radius: 12px;
+  width: 200px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+}
+
+.chatbot {
+  padding: 30px 120px;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.message {
+  width: 100%;
+  max-width: 650px;
+  background-color: #3706aae1;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.message.user {
+  background-color: #241152;
+  margin: 30px 0 30px auto;
+}
+
+.generated-message {
+  font-size: 18px;
+}
+
+.message .date{
+  font-size: 14px;
+  color: #a9acaf;
+  margin-top: 10px;
+}
+
+.bot {
+  color: #FFF; 
+}
+
+.bot p {
+  margin: 10px 0;
+  line-height: 130%;
+  color: #FFF;
+}
+
+.bot h1 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.bot h2 {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.bot ul , .bot ol {
+  margin: 10px 0 10px 30px
+} 
+
+.bot li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 680px) {
+  header, .chatbot, footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  button {
+    width: 140px;
+  }
+}
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .chatbot {
+    padding: 20px 10px;
+  }
+}
