@@ -56,6 +56,12 @@ input {
   padding-left: 10px;
   background-color:  #0F172A;
   outline: none;
+  border: 1px solid transparent;
+  color: #a9acaf;
+}
+
+input:hover {
+  border-color: #9167f5;
 }
 
 button {
@@ -64,6 +70,11 @@ button {
   height: 40px;
   border: 0;
   cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  box-shadow: 0 0 16px #9167f5;
 }
 
 .chatbot {
