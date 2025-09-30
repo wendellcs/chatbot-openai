@@ -68,8 +68,8 @@ button {
 
 .chatbot {
   padding: 30px 120px;
-  flex-grow: 1;
-  overflow: auto;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .message {
