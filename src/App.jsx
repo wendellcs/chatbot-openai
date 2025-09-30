@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { RiRobot2Line } from "react-icons/ri";
 import { BsSend } from "react-icons/bs";
@@ -11,6 +11,16 @@ function App() {
     createdAt: new Date(),
     from: 'bot'
   }])
+  
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const [userMessage, setUserMessage] = useState('')
   const [loading, setLoading] = useState(false)
@@ -72,6 +82,8 @@ function App() {
             <p className='generated-message'>Digitando...</p>
           </div>
         )}
+
+        <div ref={messagesEndRef} />
      </div>
 
      <footer>
